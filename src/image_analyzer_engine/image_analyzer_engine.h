@@ -41,15 +41,16 @@ namespace ImageAnalyzerAPI
 {
    /** X/Y coordinates of a point within an image */
    struct impoint {
+   private:
       int xyCoordinates[2] = { 0, 0 };
    public:
       int x(void) { return xyCoordinates[0]; }
       int y(void) { return xyCoordinates[1]; }
       void x(int x) { xyCoordinates[0] = x; }
       void y(int y) { xyCoordinates[1] = y; }
-      void operator()(int xy[2]) { 
-         xyCoordinates[0] = xy[0]; 
-         xyCoordinates[1] = xy[1]; 
+      void operator()(int xy[2]) {
+         xyCoordinates[0] = xy[0];
+         xyCoordinates[1] = xy[1];
       }
       void operator()(int x, int y) {
          xyCoordinates[0] = x;
@@ -59,6 +60,7 @@ namespace ImageAnalyzerAPI
 
    /** X/Y dimensions of an image or sub-image */
    struct imsize {
+   private:
       int xyDimensions[2] = { 0, 0 };
    public:
       int x(void) { return xyDimensions[0]; }
@@ -81,20 +83,9 @@ namespace ImageAnalyzerAPI
       virtual ~Analyzer();
 
       /**
-      * Types of analysis instances.  The specific analyzer type must be called
-      * at instance creation to generate a valid object.  Analyzer types cannot
-      * be changed after creation.*/
-      enum AnalyzerType
-      {
-         SAIM_ANALYZER, /**<Fit a SAIM image stack*/
-         MATIRF_ANALYZER, /**<Fit a MATIRF image stack*/
-         COLLAGEN_FIBER_ANALYZER /**Identify and quantify fiber matrix*/
-      };
-
-      /**
       * Return codes for member functions
       */
-      enum AnalyzerError
+      enum class AnalyzerError
       {
          ANALYZER_OK, /**<Successful function call*/
          ANALYZER_FAILED_DESTRUCT, /**<Resource deallocation failed*/
@@ -109,7 +100,7 @@ namespace ImageAnalyzerAPI
       * Parameter list.  Not all parameters are pertinent to all fitter types.
       * Parameters are stored internally, current values can be retireved
       * through parameter_get() or set through parameter_set()*/
-      enum AnalyzerParameter
+      enum class AnalyzerParameter
       {
          ROI_DIMENSIONS, /**<Override the image dimensions to create an ROI within the image.  In the case of an image stack the ROI is copied to all images vertically.*/
          ROI_COORDINATES, /**<Set the ORI corrdinates from the lower left corner of the imge.  Called with IMAGE_DIMENSIONS to define an ROI.  If the image dimensions are not modified the ROI is cropped to the remaining dimensions.*/
@@ -118,7 +109,7 @@ namespace ImageAnalyzerAPI
 
       /**
       * Analysis steps for processing collagen fiber matrix images*/
-      enum FiberAnalaysisType
+      enum class FiberAnalaysisType
       {
          FIBER_FILTER, /**<Run the filtering routine to identify fibers*/
          FIBER_BINARY /**Create a binary image of the fiber matrix*/
@@ -128,7 +119,7 @@ namespace ImageAnalyzerAPI
       *
       * Deinitialies the fitter and frees resources.  Calls to Destroy() will
       * invalidate any member data or functions.  Fitter must not be accessed
-      * after calls to Destroy.  Returns 
+      * after calls to Destroy.  Returns
       */
       virtual AnalyzerError Destroy() = 0;
 
@@ -176,6 +167,20 @@ namespace ImageAnalyzerAPI
       virtual AnalyzerError SetParameter(AnalyzerParameter type, impoint pt, imsize sz) = 0;
       //@}
    };
+
+
+#ifdef __cplusplus
+   extern "C" {
+#endif
+      //@{
+      /** Factory functions to generate instance of the analyzer types*/
+      IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateFiberAnalyzer();
+      IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateSAIMAnalyzer();
+      IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateMATIRFAnalyzer();
+      //@}
+#ifdef __cplusplus
+   }
+#endif
 }
 
 #endif //IMAGE_ANALYZER_ENGINE_H_

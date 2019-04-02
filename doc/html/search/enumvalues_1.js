@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['collagen_5ffiber_5fanalyzer',['COLLAGEN_FIBER_ANALYZER',['../classImageAnalyzerAPI_1_1Analyzer.html#a7c6abba4893d16b431195c24e7a1d88fa9a0ec506fb6a5b51629ff04ee9063d6d',1,'ImageAnalyzerAPI::Analyzer']]]
+  ['define_5froi',['DEFINE_ROI',['../classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786a0d2959c13926933913d413f1ec68b7d4',1,'ImageAnalyzerAPI::Analyzer']]]
 ];

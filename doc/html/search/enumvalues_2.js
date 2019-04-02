@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['define_5froi',['DEFINE_ROI',['../classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786ac880bc0231abacc0c22a8cef52f9de73',1,'ImageAnalyzerAPI::Analyzer']]]
+  ['fiber_5fbinary',['FIBER_BINARY',['../classImageAnalyzerAPI_1_1Analyzer.html#a0bbd601856b58036db0dac27b3a7418ea40b252da2670e376e8d62aebfb93dc84',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['fiber_5ffilter',['FIBER_FILTER',['../classImageAnalyzerAPI_1_1Analyzer.html#a0bbd601856b58036db0dac27b3a7418eaeb183c10191887042a5fe615f29d5eec',1,'ImageAnalyzerAPI::Analyzer']]]
 ];

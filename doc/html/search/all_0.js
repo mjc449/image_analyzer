@@ -1,14 +1,13 @@
 var searchData=
 [
   ['analyzer',['Analyzer',['../classImageAnalyzerAPI_1_1Analyzer.html',1,'ImageAnalyzerAPI']]],
-  ['analyzer_5fbad_5finput',['ANALYZER_BAD_INPUT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa23bfb2cc48374f3ec858d7d9aaf76687',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzer_5fbad_5foutput',['ANALYZER_BAD_OUTPUT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa44e17522d664b8e00deb537da530ddb6',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzer_5fbad_5fparameter_5ftype',['ANALYZER_BAD_PARAMETER_TYPE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa658471f78d37117f17847593c9d6a3cc',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzer_5fbad_5fparameter_5fvalue',['ANALYZER_BAD_PARAMETER_VALUE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6faa01f31d5c944916a720009f44b122444',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzer_5ffailed_5fdestruct',['ANALYZER_FAILED_DESTRUCT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa174222bf0340dbb4e8d0ece281c5fa36',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzer_5ffailed_5finitialize',['ANALYZER_FAILED_INITIALIZE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa1dcf449a628bb7649607609f8fbebb6d',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzer_5fok',['ANALYZER_OK',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa099c3d4db89380c02ad3ed2c35e3ea64',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5fbad_5finput',['ANALYZER_BAD_INPUT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6faca44e5aaee5c8ed0cc598803d16f2152',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5fbad_5foutput',['ANALYZER_BAD_OUTPUT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa56318f0c91735639509a4d6408c8a747',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5fbad_5fparameter_5ftype',['ANALYZER_BAD_PARAMETER_TYPE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa1ac33804bf97fa9dce2dfe18c9a77b30',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5fbad_5fparameter_5fvalue',['ANALYZER_BAD_PARAMETER_VALUE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa7ac480e8981524b9ac620842c9444f20',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5ffailed_5fdestruct',['ANALYZER_FAILED_DESTRUCT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa3f07809f5c0b032a66d321c2215e268f',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5ffailed_5finitialize',['ANALYZER_FAILED_INITIALIZE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa9c7583e0e90bcfde0ade903ea1d511d4',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5fok',['ANALYZER_OK',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6faa19e1d89552b07996bdd85c3798f2628',1,'ImageAnalyzerAPI::Analyzer']]],
   ['analyzererror',['AnalyzerError',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6f',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzerparameter',['AnalyzerParameter',['../classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786',1,'ImageAnalyzerAPI::Analyzer']]],
-  ['analyzertype',['AnalyzerType',['../classImageAnalyzerAPI_1_1Analyzer.html#a7c6abba4893d16b431195c24e7a1d88f',1,'ImageAnalyzerAPI::Analyzer']]]
+  ['analyzerparameter',['AnalyzerParameter',['../classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786',1,'ImageAnalyzerAPI::Analyzer']]]
 ];
