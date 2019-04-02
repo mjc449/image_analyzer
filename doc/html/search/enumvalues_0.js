@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['analyzer_5fbad_5finput',['ANALYZER_BAD_INPUT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa23bfb2cc48374f3ec858d7d9aaf76687',1,'ImageAnalyzerAPI::Analyzer']]],
+  ['analyzer_5fbad_5foutput',['ANALYZER_BAD_OUTPUT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa44e17522d664b8e00deb537da530ddb6',1,'ImageAnalyzerAPI::Analyzer']]],
   ['analyzer_5fbad_5fparameter_5ftype',['ANALYZER_BAD_PARAMETER_TYPE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa658471f78d37117f17847593c9d6a3cc',1,'ImageAnalyzerAPI::Analyzer']]],
   ['analyzer_5fbad_5fparameter_5fvalue',['ANALYZER_BAD_PARAMETER_VALUE',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6faa01f31d5c944916a720009f44b122444',1,'ImageAnalyzerAPI::Analyzer']]],
   ['analyzer_5ffailed_5fdestruct',['ANALYZER_FAILED_DESTRUCT',['../classImageAnalyzerAPI_1_1Analyzer.html#aaa496994b31f1e4b746822faeabf9c6fa174222bf0340dbb4e8d0ece281c5fa36',1,'ImageAnalyzerAPI::Analyzer']]],

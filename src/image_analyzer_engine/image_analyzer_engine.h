@@ -1,4 +1,4 @@
-/*
+/**
 Copyright (c) 2019 Marshall Colville mjc449@cornell.edu
 
 Redistribution  and use in source and binary forms, with or without
@@ -32,24 +32,64 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define IMAGE_ANALYZER_API_      __declspec(dllimport)
 #endif //MAKE_DLL_
 
+#include <string>
+
 /**
 *Image analysis and data fitting API entry point.
 */
 namespace ImageAnalyzerAPI
 {
    /** X/Y coordinates of a point within an image */
-   typedef struct impoint {
-      int xyCoords[2];
-   } impoint;
+   struct impoint {
+      int xyCoordinates[2] = { 0, 0 };
+   public:
+      int x(void) { return xyCoordinates[0]; }
+      int y(void) { return xyCoordinates[1]; }
+      void x(int x) { xyCoordinates[0] = x; }
+      void y(int y) { xyCoordinates[1] = y; }
+      void operator()(int xy[2]) { 
+         xyCoordinates[0] = xy[0]; 
+         xyCoordinates[1] = xy[1]; 
+      }
+      void operator()(int x, int y) {
+         xyCoordinates[0] = x;
+         xyCoordinates[1] = y;
+      }
+   };
+
    /** X/Y dimensions of an image or sub-image */
-   typedef struct imsize {
-      int xyDims[2];
-   } imsize;
+   struct imsize {
+      int xyDimensions[2] = { 0, 0 };
+   public:
+      int x(void) { return xyDimensions[0]; }
+      int y(void) { return xyDimensions[1]; }
+      void x(int x) { xyDimensions[0] = x; }
+      void y(int y) { xyDimensions[1] = y; }
+      void operator()(int xy[2]) {
+         xyDimensions[0] = xy[0];
+         xyDimensions[1] = xy[1];
+      }
+      void operator()(int x, int y) {
+         xyDimensions[0] = x;
+         xyDimensions[1] = y;
+      }
+   };
 
    class Analyzer
    {
    public:
       virtual ~Analyzer();
+
+      /**
+      * Types of analysis instances.  The specific analyzer type must be called
+      * at instance creation to generate a valid object.  Analyzer types cannot
+      * be changed after creation.*/
+      enum AnalyzerType
+      {
+         SAIM_ANALYZER, /**<Fit a SAIM image stack*/
+         MATIRF_ANALYZER, /**<Fit a MATIRF image stack*/
+         COLLAGEN_FIBER_ANALYZER /**Identify and quantify fiber matrix*/
+      };
 
       /**
       * Return codes for member functions
@@ -105,7 +145,7 @@ namespace ImageAnalyzerAPI
       * Specify the absolute path to the input raw image to be analyzed.
       * @param input Path to the raw image file
       * @retval returns OK on succesful read of input image*/
-      virtual AnalyzerError SetInputPath() = 0;
+      virtual AnalyzerError SetInputPath(std::string input) = 0;
 
       /** @brief Set the output filepath
       *
@@ -114,24 +154,26 @@ namespace ImageAnalyzerAPI
       * saved.
       * @param output Path and filename for the output image file(s)
       * @retval Returns OK on successful write*/
-      virtual AnalyzerError SetOutputPath() = 0;
+      virtual AnalyzerError SetOutputPath(std::string output) = 0;
 
       //@{
       /** Set or update analysis parameters
-      * @param paramType Fitter specific parameter value to be updated
-      * @param paramVal New parameter value
+      * @param type Fitter specific parameter value to be updated
+      * @param val New parameter value
       * @retval Returns Returns ANALYZER_OK on success, ANALYZER_BAD_PARAMETER_*
       * on failure
       */
-      virtual AnalyzerError SetParameter(AnalyzerParameter, short) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, int) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, float) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, double) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, short*) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, int*) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, float*) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, double*) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter, int*, int*) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, short val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, int val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, float val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, double val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, short* val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, int* val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, float* val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, double* val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, impoint val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, imsize val) = 0;
+      virtual AnalyzerError SetParameter(AnalyzerParameter type, impoint pt, imsize sz) = 0;
       //@}
    };
 }
