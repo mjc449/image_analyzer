@@ -175,8 +175,8 @@ namespace ImageAnalyzerAPI
       //@{
       /** Factory functions to generate instance of the analyzer types*/
       IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateFiberAnalyzer();
-      IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateSAIMAnalyzer();
-      IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateMATIRFAnalyzer();
+      //IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateSAIMAnalyzer();
+      //IMAGE_ANALYZER_API_ Analyzer* __cdecl CreateMATIRFAnalyzer();
       //@}
 #ifdef __cplusplus
    }

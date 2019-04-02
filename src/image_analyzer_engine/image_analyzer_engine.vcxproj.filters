@@ -23,5 +23,8 @@
     <ClCompile Include="crm_collagen_analyzer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fiber_analyzer_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

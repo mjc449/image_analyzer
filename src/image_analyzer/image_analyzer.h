@@ -1,4 +1,4 @@
-/*
+/**
 Copyright (c) 2019 Marshall Colville mjc449@cornell.edu
 
 Redistribution  and use in source and binary forms, with or without
@@ -22,7 +22,6 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
 #ifndef IMAGE_ANALYZER_H_
 #define IMAGE_ANALYZER_H_
 
