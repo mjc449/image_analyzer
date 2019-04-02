@@ -26,11 +26,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 namespace ImageAnalyzerAPI
 {
+#define OK_ Analyzer::ANALYZER_ERROR::ANALYZER_OK
+
    /**Definition for the collagen fiber confocal reflection microscopy
    image analyzer class*/
    class FiberAnalyzer : public Analyzer {
    public:
-      ~FiberAnalyzer()
+      virtual ~FiberAnalyzer()
       {
 
       }
@@ -40,6 +42,103 @@ namespace ImageAnalyzerAPI
 
       }
 
+      ANALYZER_ERROR Destroy()
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR Initialize()
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetInputPath(std::string inputPath)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetOutputPath(std::string outputPath)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         short val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         int val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         float val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         double val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         short *val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         int *val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         float *val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         double *val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         impoint val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         imsize val)
+      {
+         return OK_;
+      }
+
+      ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         impoint point,
+         imsize size)
+      {
+         return OK_;
+      }
    };
 
    /** Factory function definition for creating a fiber analysis instance*/

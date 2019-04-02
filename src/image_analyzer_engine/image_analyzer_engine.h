@@ -80,12 +80,12 @@ namespace ImageAnalyzerAPI
    class Analyzer
    {
    public:
-      virtual ~Analyzer();
+      virtual ~Analyzer() {}
 
       /**
       * Return codes for member functions
       */
-      enum class AnalyzerError
+      enum class ANALYZER_ERROR
       {
          ANALYZER_OK, /**<Successful function call*/
          ANALYZER_FAILED_DESTRUCT, /**<Resource deallocation failed*/
@@ -121,7 +121,7 @@ namespace ImageAnalyzerAPI
       * invalidate any member data or functions.  Fitter must not be accessed
       * after calls to Destroy.  Returns
       */
-      virtual AnalyzerError Destroy() = 0;
+      virtual ANALYZER_ERROR Destroy() = 0;
 
       /** @brief Begins the fitter instance and allocates buffers
       *
@@ -129,14 +129,14 @@ namespace ImageAnalyzerAPI
       * allocated and intial default values for fit parameters are set.  Values
       * can be changed or reset through the appropriate function calls following
       * initialization.*/
-      virtual AnalyzerError Initialize() = 0;
+      virtual ANALYZER_ERROR Initialize() = 0;
 
       /** @brief Set the target image filepath
       *
       * Specify the absolute path to the input raw image to be analyzed.
       * @param input Path to the raw image file
       * @retval returns OK on succesful read of input image*/
-      virtual AnalyzerError SetInputPath(std::string input) = 0;
+      virtual ANALYZER_ERROR SetInputPath(std::string input) = 0;
 
       /** @brief Set the output filepath
       *
@@ -145,7 +145,7 @@ namespace ImageAnalyzerAPI
       * saved.
       * @param output Path and filename for the output image file(s)
       * @retval Returns OK on successful write*/
-      virtual AnalyzerError SetOutputPath(std::string output) = 0;
+      virtual ANALYZER_ERROR SetOutputPath(std::string output) = 0;
 
       //@{
       /** Set or update analysis parameters
@@ -154,17 +154,40 @@ namespace ImageAnalyzerAPI
       * @retval Returns Returns ANALYZER_OK on success, ANALYZER_BAD_PARAMETER_*
       * on failure
       */
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, short val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, int val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, float val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, double val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, short* val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, int* val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, float* val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, double* val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, impoint val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, imsize val) = 0;
-      virtual AnalyzerError SetParameter(AnalyzerParameter type, impoint pt, imsize sz) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         short val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         int val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         float val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         double val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         short* val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         int* val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         float* val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         double* val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         impoint val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         imsize val) = 0;
+      virtual ANALYZER_ERROR SetParameter(
+         AnalyzerParameter type,
+         impoint pt,
+         imsize sz) = 0;
       //@}
    };
 
