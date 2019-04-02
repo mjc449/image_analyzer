@@ -109,7 +109,8 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:aaa496994b31f1e4b746822faeabf9c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a582d109f8ed613546d61bee142026786"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786">AnalyzerParameter</a> { <a class="el" href="classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786a3138e6427e19dbe91c419c2ecd6f4292">IMAGE_DIMENSIONS</a>
+<tr class="memitem:a582d109f8ed613546d61bee142026786"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786">AnalyzerParameter</a> { <a class="el" href="classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786a3138e6427e19dbe91c419c2ecd6f4292">IMAGE_DIMENSIONS</a>, 
+<a class="el" href="classImageAnalyzerAPI_1_1Analyzer.html#a582d109f8ed613546d61bee142026786a9a9cdaabb9563f7a29885c03b7de9ad7">ROI_COORDINATES</a>
  }</td></tr>
 <tr class="separator:a582d109f8ed613546d61bee142026786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -183,6 +184,9 @@ Public Member Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a582d109f8ed613546d61bee142026786a3138e6427e19dbe91c419c2ecd6f4292"></a>IMAGE_DIMENSIONS</em>&#160;</td><td class="fielddoc">
 <p>Override the image dimensions to create an ROI within the image. In the case of an image stack the ROI is copied to all images vertically. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a582d109f8ed613546d61bee142026786a9a9cdaabb9563f7a29885c03b7de9ad7"></a>ROI_COORDINATES</em>&#160;</td><td class="fielddoc">
+<p>Set the ORI corrdinates from the lower left corner of the imge. Called with IMAGE_DIMENSIONS to define an ROI. If the image dimensions are not modified the ROI is cropped to the remaining dimensions. </p>
 </td></tr>
 </table>
 
@@ -631,7 +635,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2019 01:39:53 for Custom image analysis program for the Paszek Lab by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 2 2019 01:45:45 for Custom image analysis program for the Paszek Lab by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -7,12 +7,12 @@
 
 var indexSectionsWithContent =
 {
-  0: "adis",
+  0: "adirs",
   1: "ai",
   2: "i",
   3: "dis",
   4: "a",
-  5: "ai"
+  5: "air"
 };
 
 var indexSectionNames =
