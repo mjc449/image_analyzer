@@ -66,6 +66,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          short val)
       {
+         switch (type){
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -73,6 +77,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          int val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -80,6 +88,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          float val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -87,6 +99,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          double val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -94,6 +110,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          short *val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -101,6 +121,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          int *val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -108,6 +132,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          float *val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -115,6 +143,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          double *val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -122,6 +154,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          impoint val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -129,6 +165,10 @@ namespace ImageAnalyzerAPI
          AnalyzerParameter type,
          imsize val)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
 
@@ -137,6 +177,10 @@ namespace ImageAnalyzerAPI
          impoint point,
          imsize size)
       {
+         switch (type) {
+         default:
+            return ANALYZER_ERROR::ANALYZER_BAD_PARAMETER_TYPE;
+         }
          return OK_;
       }
    };
