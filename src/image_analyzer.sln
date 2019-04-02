@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image_analyzer", "image_analyzer\image_analyzer.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image_analyzer_engine", "image_analyzer_engine\image_analyzer_engine.vcxproj", "{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x64.Build.0 = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Debug|x86.ActiveCfg = Debug|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.ActiveCfg = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x64.Build.0 = Release|x64
+		{B12702AD-ABFB-343A-A199-8E24837244A3}.Release|x86.ActiveCfg = Release|x64
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Debug|x64.ActiveCfg = Debug|x64
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Debug|x64.Build.0 = Debug|x64
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Debug|x86.ActiveCfg = Debug|Win32
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Debug|x86.Build.0 = Debug|Win32
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Release|x64.ActiveCfg = Release|x64
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Release|x64.Build.0 = Release|x64
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Release|x86.ActiveCfg = Release|Win32
+		{DBC35E8E-0D50-4FF0-BF32-08E45811AA78}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B6C242F-9BD9-4527-BCEE-494ABCEE3307}
+	EndGlobalSection
+EndGlobal
